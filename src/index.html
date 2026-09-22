@@ -1,13 +1,240 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="My personal introduction, projects, and interests." />
+  <title>Hongyi Chen | Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="container navigation" aria-label="Main navigation">
+      <a class="brand" href="#home">Hongyi Chen<span>.</span></a>
+      <ul><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero stripe" id="home" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="avatar" aria-label="Placeholder profile initials">HC</div>
+        <p class="eyebrow">Hello, nice to meet you</p>
+        <h1 id="hero-title">Hongyi (Trevor) Chen.</h1>
+        <div class="divider" aria-hidden="true">✦</div>
+        <p class="hero-description">Student. Developer. Curious by nature.</p>
+        <p class="hero-note">NPU compiler engineer, Master student @ UIUC, Researcher in LLM.</p>
+        <a class="button button-outline" href="#projects">Explore my work </a>
+      </div>
+    </section>
+    <section class="skills stripe" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <p class="eyebrow">Tools I work with</p>
+        <h2 id="skills-title">Technical Skills</h2>
+        <div class="divider" aria-hidden="true">✦</div>
+        <div class="skills-grid">
+          <article class="skill-group">
+            <p class="skill-number" aria-hidden="true">01</p>
+            <h3>Programming Languages</h3>
+            <ul><li>C++</li><li>Python</li><li>Java</li><li>Go</li></ul>
+          </article>
+          <article class="skill-group">
+            <p class="skill-number" aria-hidden="true">02</p>
+            <h3>Compilers &amp; Parallel Computing</h3>
+            <ul><li>LLVM</li><li>MLIR</li><li>CUDA</li><li>OpenMP</li></ul>
+          </article>
+          <article class="skill-group">
+            <p class="skill-number" aria-hidden="true">03</p>
+            <h3>Data &amp; Analytics</h3>
+            <ul><li>R</li><li>SQL</li><li>Scala</li><li>Hadoop</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="stripe" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="eyebrow">Ideas into practice</p>
+        <h2 id="projects-title">Research &amp; Projects</h2>
+        <div class="divider" aria-hidden="true">✦</div>
+        <p class="section-intro">A space for projects, experiments, and things I'm learning.</p>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-art art-data" aria-hidden="true">
+              <span>{ }</span>
+            </div>
+    
+            <div class="project-copy">
+              <p class="category">Data &amp; Discovery</p>
+              <h3>Compiler Engineering</h3>
+              <p>
+                Two years of industry experience in NPU compiler design
+                and optimization.
+              </p>
+            </div>
+            <template class="project-modal-content">
+              <p>I worked on compiler optimization for NPU and CPU workloads, including Flash Attention support, MLIR/LLVM lowering, cross-platform code generation, and GEMM performance optimization. I also implemented SYCL-based matrix multiplication support for portable high-performance computing.</p>
+              <h3>My contribution</h3>
+              <p>• Designed features for Flash Attention optimization, like jump/call offset relaxation, auto sync, and loop canonicalization </p>
+              <p>• Developed code abstraction and support code transfer to CCE, CUDA, OpenMP to attract more potential clients </p>
+              <p>• Wrote Pattern Transform pass to transform MLIR instructions into company developed instructions and another pass to transform the target IR into LLVM IR </p>
+              <p>• Developed many features for the matrix multiplication on CPU like the integer types, dynamic pattern, different tiling strategies, double buffering, and factors (c := α * a x b + β * c) </p>
+              <p>• Supported another way to do GEMM on CPU - add SYCL built-in functions so that users can simply use the built-in function to call the matrix multiplication (C++ → OpenCL → LLVM IR) </p>
+            </template>
+          </article>
+          <article class="project-card">
+            <div class="project-art art-learning" aria-hidden="true"><span>∑</span></div>
+            <div class="project-copy">
+              <p class="category">AI acceleration</p>
+              <h3>GEMM Optimization</h3>
+              <p>Optimizing GEMM on AI accelerators to reduce memory overhead. <a class="paper-link"
+                  href="https://ieeexplore.ieee.org/document/10885290" target="_blank" rel="noopener noreferrer">Read the
+                  paper</a></p>
+            </div>
+            <template class="project-modal-content">
+              <p>Worked with Professor Tarek Abdelrahman on paper development and experimental evaluation, including background and motivation writing, use-case design, and data collection across single-threaded, multithreaded, ideal, and theoretical scenarios. I also optimized the implementation using double buffering and pipeline synchronization.</p>
+            </template>
+          </article>
+          <article class="project-card">
+            <div class="project-art art-web" aria-hidden="true"><span>&lt;/&gt;</span></div>
+            <div class="project-copy">
+              <p class="category">Web development</p>
+              <h3>Personal Website</h3>
+              <p>Built a responsive personal website to showcase my projects, experience, and interests.</p>
+            </div>
+            <template class="project-modal-content">
+              <p>Built a responsive single-page personal portfolio using HTML, SCSS, and JavaScript, featuring smooth scrolling, dynamic navigation, project modals, a carousel, animations, and responsive layouts across different screen sizes.</p>
+            </template>
+          </article>
+          <article class="project-card">
+            <div class="project-art art-design" aria-hidden="true"><span>Aa</span></div>
+            <div class="project-copy">
+              <p class="category">LLM systems</p>
+              <h3>CUDA Acceleration</h3>
+              <p>Optimizing GPT's forward pass with CUDA to improve GPU inference performance.</p>
+            </div>
+            <template class="project-modal-content">
+              <p>Optimized GPT inference with CUDA by accelerating its forward pass and improving GPU execution efficiency, with a focus on transformer workloads and high-performance parallel computing.</p>
+            </template>
+          </article>
+          <article class="project-card">
+            <div class="project-art art-tool" aria-hidden="true"><span>⌘</span></div>
+            <div class="project-copy">
+              <p class="category">Computer vision</p>
+              <h3>Vision &amp; Generation</h3>
+              <p>Classifying writers and pens with CNNs and generating handwritten circles with diffusion models.</p>
+            </div>
+            <template class="project-modal-content">
+              <p>Developed a computer vision system for classifying writers and pens using Convolutional Neural Networks. Additionally, implemented a diffusion model to generate handwritten circles, showcasing the application of generative models in creative tasks.</p>
+            </template>
+          </article>
+          <article class="project-card">
+            <div class="project-art art-next" aria-hidden="true"><span>↗</span></div>
+            <div class="project-copy">
+              <p class="category">What's next</p>
+              <h3>DFlash Scheduling</h3>
+              <p>Optimizing high-concurrency DFlash serving through adaptive speculation scheduling.</p>
+            </div>
+            <template class="project-modal-content">
+              <p>Evaluating DFlash speculative decoding across heterogeneous hardware platforms to understand how GPU architecture, memory behavior, synchronization, and runtime overhead affect LLM inference performance, while exploring hardware-aware optimizations for faster decoding.</p>
+            </template>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="about stripe" id="about" aria-labelledby="about-title">
+      <div class="container narrow">
+        <p class="eyebrow">The person behind the projects</p>
+        <h2 id="about-title">About Me</h2>
+        <div class="divider" aria-hidden="true">✦</div>
+        <div class="about-columns"><p>I'm a Master student at UIUC, specializing in NPU compiler engineering and researching LLMs. I'm particularly interested in developing optimizations that improve the efficiency and performance of large language models.</p><p>I'm currently learning more about web development and high-performance computing. My recent research is improving LLM inference to derease cost of running powerful models. In my free time, I enjoy badminton, fishing, and mahjong.</p></div>
+        <a class="button button-outline" href="#contact">Let's connect </a>
+      </div>
+    </section>
+    <section class="experience stripe" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <p class="eyebrow">Learning, building, and growing</p>
+        <h2 id="experience-title">Industry &amp; Education</h2>
+        <div class="divider" aria-hidden="true">✦</div>
+        <div class="experience-carousel" role="region" aria-roledescription="carousel" aria-label="Industry and education experience">
+          <button class="carousel-arrow carousel-previous" type="button" aria-label="Previous experience" aria-controls="experience-slides"><span aria-hidden="true"><</span></button>
+          <div class="experience-slides" id="experience-slides">
+            <article class="experience-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3: NPU compiler engineering">
+              <div class="experience-copy">
+                <p class="eyebrow">Industry · Two years</p>
+                <h3>NPU Compiler<br />Engineering</h3>
+                <p>Designing and optimizing compilers for neural processing units, with a focus on making AI workloads run efficiently.</p>
+                <ul class="experience-tags" aria-label="Focus areas"><li>Compiler design</li><li>AI accelerators</li><li>Optimization</li></ul>
+              </div>
+              <div class="experience-visual visual-industry" aria-hidden="true"><span class="experience-symbol">LLVM</span><span class="visual-caption">FROM CODE TO COMPUTE</span></div>
+            </article>
+            <article class="experience-slide" role="group" aria-roledescription="slide" aria-label="2 of 3: Graduate study at UIUC" aria-hidden="true" inert>
+              <div class="experience-copy">
+                <p class="eyebrow">Education · Graduate study</p>
+                <h3>University of Illinois<br />Urbana-Champaign</h3>
+                <p>Pursuing a master's degree while exploring web development, high-performance computing, and the systems behind modern AI.</p>
+                <ul class="experience-tags" aria-label="Focus areas"><li>Computer science</li><li>Web development</li><li>HPC</li></ul>
+              </div>
+              <div class="experience-visual visual-education" aria-hidden="true"><span class="experience-symbol">UIUC</span><span class="visual-caption">KEEP ASKING. KEEP LEARNING.</span></div>
+            </article>
+            <article class="experience-slide" role="group" aria-roledescription="slide" aria-label="3 of 3: LLM systems research" aria-hidden="true" inert>
+              <div class="experience-copy">
+                <p class="eyebrow">Research · Current interests</p>
+                <h3>More Efficient<br />Language Models</h3>
+                <p>Exploring CUDA acceleration and adaptive speculation scheduling to improve LLM inference performance and reduce the cost of running powerful models.</p>
+                <ul class="experience-tags" aria-label="Focus areas"><li>LLM inference</li><li>CUDA</li><li>DFlash scheduling</li></ul>
+              </div>
+              <div class="experience-visual visual-research" aria-hidden="true"><span class="experience-symbol">AI</span><span class="visual-caption">TURN CURIOSITY INTO PROGRESS</span></div>
+            </article>
+          </div>
+          <button class="carousel-arrow carousel-next" type="button" aria-label="Next experience" aria-controls="experience-slides"><span aria-hidden="true">></span></button>
+          <div class="carousel-pagination" role="group" aria-label="Choose an experience">
+            <button type="button" aria-label="Show NPU compiler engineering" aria-current="true" aria-controls="experience-slides"></button>
+            <button type="button" aria-label="Show graduate study at UIUC" aria-controls="experience-slides"></button>
+            <button type="button" aria-label="Show LLM systems research" aria-controls="experience-slides"></button>
+          </div>
+          <p class="carousel-status" aria-live="polite" aria-atomic="true">1 / 3 · NPU compiler engineering</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact stripe" id="contact" aria-labelledby="contact-title">
+      <div class="container narrow">
+        <p class="eyebrow">Good things start with a hello</p>
+        <h2 id="contact-title">Get in Touch</h2>
+        <div class="divider" aria-hidden="true">✦</div>
+        <p class="section-intro">Have an idea, a question, or a shared interest?<br />I'd love to hear from you.</p>
+        <a class="email-link" href="mailto:hongyic5@illinois.edu">hongyic5@illinois.edu <span aria-hidden="true">↗</span></a>
+        <video class="contact-video" controls preload="metadata" playsinline aria-label="Contact section video">
+          <source src="assets/144584-785095786.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h2>Based In</h2><p>Champaign, IL</p></div>
+      <div>
+        <h2>Find Me Online</h2>
+        <ul class="social-links" aria-label="Social profiles and email">
+          <li><a class="social-icon" href="https://github.com/Trevor0523" aria-label="GitHub profile" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+          <li><a class="social-icon" href="https://www.linkedin.com/in/hongyi-chen-63353a22a/" aria-label="LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+          <li><a class="social-icon" href="mailto:hongyic5@illinois.edu" aria-label="Email Hongyi Chen" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <div><h2>A Little More</h2><p>Always learning.<br />Always making something new.</p></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Hongyi Chen · Built with curiosity.</p>
+    </div>
+    </footer>
+    <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title">
+      <button class="modal-close" type="button" aria-label="Close project details" autofocus>×</button>
+    
+      <h2 id="project-modal-title"></h2>
+      <div class="divider" aria-hidden="true">✦</div>
+    
+      <div id="project-modal-art" aria-hidden="true"></div>
+      <div id="project-modal-body"></div>
+    </dialog>
+</body>
 </html>
