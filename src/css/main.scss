@@ -30,11 +30,12 @@ h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); letter-spacing: -.035em; }
     text-underline-offset: 8px;
   }
   &.scrolled { min-height: 56px; gap: 18px;
+    .brand { font-size: 1.1rem; }
     ul { gap: 24px; }
     li a { font-size: .65rem; }
   }
 }
-.brand { font-size: 1.35rem; font-weight: 800; letter-spacing: -.04em; span { color: #66dbc4; } }
+.brand { font-size: 1.35rem; font-weight: 800; letter-spacing: -.04em; transition: font-size 200ms ease; span { color: #66dbc4; } }
 .hero, .about { background: $teal; color: white; }
 .hero { padding-block: 66px 76px; }
 .about {
@@ -69,6 +70,17 @@ h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); letter-spacing: -.035em; }
   ul { display: flex; flex-direction: column; gap: 10px; list-style: none; padding: 0; margin: 20px 0 0; color: $muted; }
 }
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 40px; text-align: left; }
+@media (max-width: 850px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .project-card { overflow: hidden; border: 1px solid #e0e5df; border-radius: 8px; background: white; }
 .project-card[role='button'] {
   cursor: pointer;

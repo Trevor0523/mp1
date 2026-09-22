@@ -115,7 +115,11 @@ document.querySelectorAll('.project-grid .project-card').forEach((card) => {
     document.documentElement.classList.add('modal-open');
   }
 
-  card.addEventListener('click', openProjectModal);
+  card.addEventListener('click', (event) => {
+    // Let links inside the card navigate without opening the project modal.
+    if (event.target.closest('a')) return;
+    openProjectModal();
+  });
 
   card.addEventListener('keydown', (event) => {
     if (event.target !== card) return;
